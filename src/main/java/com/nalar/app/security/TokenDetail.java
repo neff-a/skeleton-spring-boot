@@ -14,11 +14,11 @@ public class TokenDetail {
 
     private String token;
 
-    private Date timestamp;
+    private long timestamp;
 
     public TokenDetail(final String token) {
         this.token = token;
-        timestamp = new Date();
+        timestamp = new Date().getTime();
     }
 
 }
