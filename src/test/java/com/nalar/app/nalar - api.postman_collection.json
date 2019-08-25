@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "23a11108-3e5e-4b83-916e-f1139ff34b95",
+		"name": "nalar - api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\": \"Neftali\",\n\t\"lastName\": \"Alarcón\",\n\t\"email\": \"miviejodi@gmail.com\",\n\t\"password\": \"x\",\n\t\"locale\": \"es\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/register",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"register"
+					]
+				},
+				"description": "Register an user"
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticate user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"miviejodi@gmail.com\",\n\t\"password\": \"x\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/login",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"login"
+					]
+				},
+				"description": "Authenticate User by email and password"
+			},
+			"response": []
+		},
+		{
+			"name": "Get user ",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtaXZpZWpvZGlAZ21haWwuY29tIiwicm9sZXMiOiJ1c2VyIiwiaWF0IjoxNTY2NzA2NjMyfQ.JtnmDLdqW0cxbWw4dI4fSH1gje5R3vaITwvIAEN4P_g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/api/users/fa26a994-3ac7-4bee-9a03-da6828283866",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"fa26a994-3ac7-4bee-9a03-da6828283866"
+					]
+				},
+				"description": "Get an user by UUID"
+			},
+			"response": []
+		}
+	]
+}
