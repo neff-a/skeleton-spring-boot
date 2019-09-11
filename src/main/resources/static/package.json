@@ -5,9 +5,10 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "start": "webpack-dev-server --mode development --open"
   },
-  "keywords": [],
+  "keywords"  : [],
   "author": "nalar",
   "license": "ISC",
   "dependencies": {
@@ -15,6 +16,7 @@
     "webpack": "^4.39.3"
   },
   "devDependencies": {
-    "webpack-cli": "^3.3.8"
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.0"
   }
 }
