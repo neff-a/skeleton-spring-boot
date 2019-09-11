@@ -4,7 +4,7 @@
 #install dependencies 
 npm install
 
-# run webpack watching changes 
+#run webpack watching changes 
 npx webpack --config webpack.config.js -w
 
 #run webpack server 
